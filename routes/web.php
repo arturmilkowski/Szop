@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Page\PageController;
+use App\Http\Controllers\Page\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class, 'index'])->name('pages.index');
+Route::get('/o-firmie', [PageController::class, 'about'])->name('pages.about');
+Route::get('/kontakt', [ContactController::class, 'create'])->name('pages.contacts.create');
+Route::post('/kontakt/wyślij', [ContactController::class, 'store'])->name('pages.contacts.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,4 +31,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
