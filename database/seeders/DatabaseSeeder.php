@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         // \App\Models\User::factory(10)->create();
 
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ConcentrationSeeder::class,
             ProductSeeder::class,
-            // SizeSeeder::class,
+            SizeSeeder::class,
             // TypeSeeder::class,
             // PostSeeder::class,
             // CommentSeeder::class,
