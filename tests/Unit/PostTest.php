@@ -22,11 +22,11 @@ class PostTest extends TestCase
         $this->assertDatabaseHas('posts', ['title' => $post->title]);
     }
 
-    // public function testPostHasManyComments(): void
-    // {
-    //     $post = Post::factory()->make();
-    //     $comments = $post->comments;
+    public function testPostHasManyComments(): void
+    {
+        $post = Post::factory()->make();
+        $comments = $post->comments;
 
-    //     $this->assertInstanceOf(Collection::class, $comments);
-    // }
+        $this->assertInstanceOf(Collection::class, $comments);
+    }
 }

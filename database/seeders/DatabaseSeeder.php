@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             TypeSeeder::class,
             PostSeeder::class,
             CommentSeeder::class,
-            // ReplySeeder::class,
+            ReplySeeder::class,
         ]);
     }
 }

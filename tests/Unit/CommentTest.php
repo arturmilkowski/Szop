@@ -52,11 +52,11 @@ class CommentTest extends TestCase
     //     $this->assertInstanceOf(User::class, $user);
     // }
 
-    // public function testCommentHasManyReplies(): void
-    // {
-    //     $comment = Comment::factory()->make();
-    //     $replies = $comment->replies;
+    public function testCommentHasManyReplies(): void
+    {
+        $comment = Comment::factory()->make();
+        $replies = $comment->replies;
 
-    //     $this->assertInstanceOf(Collection::class, $replies);
-    // }
+        $this->assertInstanceOf(Collection::class, $replies);
+    }
 }
