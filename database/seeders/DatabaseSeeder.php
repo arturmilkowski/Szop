@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             ConcentrationSeeder::class,
             ProductSeeder::class,
             SizeSeeder::class,
-            // TypeSeeder::class,
+            TypeSeeder::class,
             // PostSeeder::class,
             // CommentSeeder::class,
             // ReplySeeder::class,
