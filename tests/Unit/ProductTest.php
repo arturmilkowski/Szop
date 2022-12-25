@@ -73,15 +73,15 @@ class ProductTest extends TestCase
         $this->assertInstanceOf(Category::class, $concentration);
     }
 
-    // public function testProductHasManyTypes(): void
-    // {
-    //     $product = Product::factory()
-    //         ->for(Brand::factory())
-    //         ->for(Category::factory())
-    //         ->for(Concentration::factory())
-    //         ->create();
-    //     $types = $product->types;
+    public function testProductHasManyTypes(): void
+    {
+        $product = Product::factory()
+            ->for(Brand::factory())
+            ->for(Category::factory())
+            ->for(Concentration::factory())
+            ->create();
+        $types = $product->types;
 
-    //     $this->assertInstanceOf(Collection::class, $types);
-    // }
+        $this->assertInstanceOf(Collection::class, $types);
+    }
 }

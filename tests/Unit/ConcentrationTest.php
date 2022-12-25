@@ -5,7 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
-use App\Models\Product\{Brand, Category, Concentration};
+use App\Models\Product\{Brand, Category, Concentration, Product};
 
 class ConcentrationTest extends TestCase
 {
@@ -28,18 +28,18 @@ class ConcentrationTest extends TestCase
         ]);
     }
 
-    // public function testConcentrationHasManyProducts(): void
-    // {
-    //     $concentration = Concentration::factory()
-    //         ->has(
-    //             Product::factory()
-    //                 ->for(Brand::factory())
-    //                 ->for(Category::factory())
-    //                 ->for(Concentration::factory())
-    //         )
-    //         ->create();
-    //     $products = $concentration->products;
+    public function testConcentrationHasManyProducts(): void
+    {
+        $concentration = Concentration::factory()
+            ->has(
+                Product::factory()
+                    ->for(Brand::factory())
+                    ->for(Category::factory())
+                    ->for(Concentration::factory())
+            )
+            ->create();
+        $products = $concentration->products;
 
-    //     $this->assertInstanceOf(Collection::class, $products);
-    // }
+        $this->assertInstanceOf(Collection::class, $products);
+    }
 }

@@ -32,11 +32,11 @@ class SizeTest extends TestCase
         );
     }
 
-    // public function testSizeHasManyTypes(): void
-    // {
-    //     $size = Size::factory()->make();
-    //     $types = $size->types;
+    public function testSizeHasManyTypes(): void
+    {
+        $size = Size::factory()->make();
+        $types = $size->types;
 
-    //     $this->assertInstanceOf(Collection::class, $types);
-    // }
+        $this->assertInstanceOf(Collection::class, $types);
+    }
 }

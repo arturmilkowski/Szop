@@ -48,8 +48,8 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    // public function types(): HasMany
-    // {
-    //     return $this->hasMany(Type::class);
-    // }
+    public function types(): HasMany
+    {
+        return $this->hasMany(Type::class);
+    }
 }
