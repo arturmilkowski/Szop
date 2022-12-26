@@ -5,9 +5,9 @@
 @forelse ($products as $product)
         <div>
             <h3><a href="{{ route('products.show', $product) }}" title="{{ $product->name }}">{{ $product->name }}</a></h3>
-            {{-- <a href="{{ route('products.show', $product) }}" title="{{ $product->name }}">
+            <a href="{{ route('products.show', $product) }}" title="{{ $product->name }}">
                 <img src="{{ asset('storage/images/products') . '/' . $product->img }}" class="img" alt="{{ $product->name }}">
-            </a> --}}
+            </a>
             <h4>{{ $product->category->name }} {{ $product->concentration->name }}</h4>
             <p>{!! $product->description !!}</p>
             <p><a href="{{ route('products.show', $product) }}" title="{{ $product->name }}">Pokaż</a></p>

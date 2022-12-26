@@ -4,7 +4,7 @@
         <div>
             <h2>{{ $product->name }}</h2>
             <h3>{{ $product->category->name }} {{ $product->concentration->name }}</h3>
-            {{-- <img src="{{ asset('storage/images/products') . '/' . $product->img }}" class="img" alt="{{ $product->name }}"> --}}
+            <img src="{{ asset('storage/images/products') . '/' . $product->img }}" class="img" alt="{{ $product->name }}">
             <p>{!! $product->description !!}</p>
             <p><a href="{{ route('pages.index') }}" title="Powrót do strony głównej">Powrót do strony głównej</a></p>
             <p><a href="{{ route('products.index') }}" title="Powrót do strony produktów">Powrót do strony produktów</a></p>
