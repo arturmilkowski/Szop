@@ -1,4 +1,4 @@
-    <footer class="flex justify-between px-4 mt-8 pt-1 border-t-[1px] border-black text-xs text-gray-500">
+    <footer class="flex justify-between px-4 mt-8 pt-1 border-t-[1px] border-black text-xs">
         <div>
             Root name: <span class="font-semibold">{{ Route::currentRouteName() }}</span> &mdash;
             Root action: <span class="font-semibold">{{ Route::currentRouteAction() }}</span>
